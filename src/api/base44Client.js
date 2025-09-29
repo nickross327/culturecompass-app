@@ -1,8 +1,13 @@
-import { createClient } from '@base44/sdk';
-// import { getAccessToken } from '@base44/sdk/utils/auth-utils';
+// src/api/base44Client.js
+import { createClient } from '@base44/sdk'
 
-// Create a client with authentication required
+// TODO: replace these three with the real values from your Base44 project settings
+const PROJECT_ID = 'YOUR_PROJECT_ID'
+const API_URL    = 'YOUR_API_URL'        // e.g. https://api.base44.ai (check your dashboard)
+const PUBLIC_KEY = 'YOUR_PUBLIC_KEY'     // if your project uses a public key, paste it here
+
 export const base44 = createClient({
-  appId: "68a0a8c371c89cb4ee1d424e", 
-  requiresAuth: true // Ensure authentication is required for all operations
-});
+  projectId: PROJECT_ID,
+  apiUrl: API_URL,
+  publicKey: PUBLIC_KEY,   // if your project doesn’t need this, you can remove this line
+})
