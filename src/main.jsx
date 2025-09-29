@@ -3,8 +3,6 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
 import base44 from './api/base44Client'
-
-// ✅ Use the provider the SDK actually exports
 import { Base44Provider } from '@base44/sdk'
 
 createRoot(document.getElementById('root')).render(
