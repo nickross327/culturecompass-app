@@ -1,10 +1,12 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/',                 // <-- important for Netlify/custom domains
+  build: { outDir: 'dist' }, // <-- explicit (Vite's default is 'dist' anyway)
   server: {
     allowedHosts: true
   },
@@ -21,4 +23,4 @@ export default defineConfig({
       },
     },
   },
-}) 
+})
